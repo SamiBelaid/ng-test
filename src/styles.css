@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+    
+    font-family: 'Comic Sans MS', sans-serif;
+    /* Police moderne et cohérente */
+    background-color: #010A13;
+    /* Couleur de fond sombre */
+    color: #F0E6D2;
+    /* Couleur du texte claire pour contraster avec le fond */
+}
+
+/* Styles supplémentaires pour les composants spécifiques */
+.mat-toolbar {
+    background-color: #1F2937;
+    /* Couleur de la toolbar pour contraster avec le fond */
+    color: #F0E6D2;
+    /* Couleur du texte de la toolbar */
+
+}
