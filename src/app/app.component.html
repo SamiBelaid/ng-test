@@ -1,4 +1,17 @@
-<p>Hey</p>
-
-<p>Ohhhhh</p>
-
+<div class="toolbar">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <img src="../assets/images/logolol.png" alt="Logo" class="logo">
+      <span class="spacer"></span>
+      <div class="nav">
+        <button mat-button class="large-button" routerLink="/accueil" routerLinkActive="active-link">Accueil</button>
+        <button mat-button class="large-button" routerLink="/champions" routerLinkActive="active-link">Champions</button>
+        <button mat-button class="large-button" routerLink="/sorts" routerLinkActive="active-link">Sorts</button>
+        <button mat-button class="large-button" routerLink="/statistique" routerLinkActive="active-link">Statistique</button>
+      </div>
+      <span class="spacer"></span>
+      <span class="large-button">Wiki</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+<router-outlet></router-outlet>

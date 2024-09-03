@@ -1,0 +1,30 @@
+<div class="champions">
+    <div class="upper-list">
+        <div class="filtre-tags">
+            <button class="other-actions" mat-mini-fab (click)="clearFilter()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span class="spacer"></span>
+            <button class="tags" mat-stroked-button (click)="selectTag(Tag.Fighter)">Fighter</button>
+            <button class="tags" mat-stroked-button (click)="selectTag(Tag.Assassin)">Assassin</button>
+            <button class="tags" mat-stroked-button (click)="selectTag(Tag.Mage)">Mage</button>
+            <button class="tags" mat-stroked-button (click)="selectTag(Tag.Marksman)">Marksman</button>
+            <button class="tags" mat-stroked-button (click)="selectTag(Tag.Support)">Support</button>
+            <button class="tags" mat-stroked-button (click)="selectTag(Tag.Tank)">Tank</button>
+            <span class="spacer"></span>
+            <button class="other-actions" mat-mini-fab (click)="addChampion()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="champion-list">
+        <mat-card *ngFor="let champion of champions | filterByTag:selectedTag" (click)="goToChampionDetail(champion)">
+            <mat-card-header>
+                <mat-card-title>{{champion.name}}</mat-card-title>
+                <mat-card-subtitle>{{ champion.title }}</mat-card-subtitle>
+            </mat-card-header>
+            <span class="spacer"></span>
+            <mat-card-content *ngFor="let tag of champion.tags">{{ tag }}</mat-card-content>
+        </mat-card>
+    </div>
+</div>

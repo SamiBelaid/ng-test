@@ -1,0 +1,17 @@
+<div class="content">
+    <div class="container" *ngFor="let sort of sorts">
+        <div class="front">
+            <div class="summoner-level">
+                <p>{{ sort.summonerLevel }}</p>
+            </div>
+            <div class="name">
+                <p>{{ sort.name }}</p>
+            </div>
+        </div>
+        <div class="back">
+            <div class="description">
+                <p>{{ sort.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>

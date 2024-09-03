@@ -1,0 +1,55 @@
+.toolbar {
+    margin-top: 1em;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    height: 40px;
+    margin-right: 16px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+mat-toolbar {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
+
+.mat-button {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.large-button {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.active-link {
+    position: relative;
+    color: #0AC8B9 !important; 
+}
+
+.active-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color: #FFD700; 
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.active-link.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
